@@ -9,5 +9,5 @@ setup(
     author='Andrey Bartashevich',
     url='https://github.com/andbar-ru/tmplog',
     license='BSD',
-    py_modules=['tmplog.py']
+    py_modules=['tmplog']
 )
