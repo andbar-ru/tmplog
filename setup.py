@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='tmplog',
-    version='1.0',
+    version='2.0',
     description='Utilities which I use for debugging purposes in python projects.',
     long_description=open('README.rst').read(),
     author='Andrey Bartashevich',

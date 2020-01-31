@@ -6,7 +6,7 @@ from pprint import pformat
 FILE = '/tmp/log.txt'
 
 
-def tmplog(*, file=None, context='nlf', format_value=True, **kwargs):
+def tmplog(*args, file=None, context='nlf', format_value=True, **kwargs):
     """Logs to file for debugging purposes.
     Values to be logged are passed with **kwargs.
 
@@ -29,6 +29,7 @@ def tmplog(*, file=None, context='nlf', format_value=True, **kwargs):
         output = '{}{}{}'.format(filename, lineno, function)
         if output:
             output += ': '
+        output += ', '.join(pformat(v) if format_value else v for v in args)
         output += ', '.join(
             '{}={}'.format(k, pformat(v) if format_value else v) for k, v in kwargs.items()
         )
