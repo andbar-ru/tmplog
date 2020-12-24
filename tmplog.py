@@ -30,7 +30,7 @@ def tmplog(*args, file=None, context='nlf', format_value=True, **kwargs):
         if output:
             output += ': '
         output += ', '.join(pformat(v) if format_value else v for v in args)
-        if output and len(kwargs.keys()) > 0:
+        if len(args) > 0 and len(kwargs.keys()) > 0:
             output += '; '
         output += ', '.join(
             '{}={}'.format(k, pformat(v) if format_value else v) for k, v in kwargs.items()
